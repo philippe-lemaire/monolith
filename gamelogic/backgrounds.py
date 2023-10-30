@@ -719,6 +719,50 @@ letting them awaken a new power. Optionally, instead of new powers, consider
 evolving the effects of their awakening ability.""",
 ]
 
+dossier_scientist = [
+    {
+        "name": "Prized Lifetime Research",
+        "options": {
+            1: "<b>Skeletal Resonator:</b> Attract or repel a single target that has a skeleton, unless they pass a STR save. No effect on cartilage.",
+            2: "<b>Portal Generator:</b> Create a portal between two flat sources that you can see. The gate closes if you pass through or break line of sight. Causes 1 fatigue.",
+            3: "<b>Temporal Bomb:</b> Time slows down 60 times in a 20 foot sphere (blast). Lasts for 1 minute outside the sphere, or one second inside. One use.",
+            4: "<b>Corpse Reviver #42:</b> Brings back the dead if used within 1 minute of death. One use.",
+            5: "<b>Particle-Mirror Array:</b> (+1 Armor) A molecular shield generator. Once a day, make a DEX save to reflect energy weapon shots back at their source.",
+            6: "<b>Creature in a Jar:</b> A baby sludge creature with one eye. Upon release, it will eat a corpse’s brain consuming its memories, effectively allowing the user to ask a corpse one question. The fresher the corpse, the better the memory. Needs a day to rest before it will come back out.",
+        },
+    },
+    {
+        "name": "Field of Expertise",
+        "options": {
+            1: "<b>Medical Doctor:</b> Take medical supplies that can restore 1d4 STR a day.",
+            2: "<b>Molecular Chemist:</b> Take a vial of universal solvent, which dissolves anything it touches.  Enough for a brick-sized portion.  One use.",
+            3: "<b>Experimental Physicist:</b> Take a can of de-friction spray. 3 charges.",
+            4: "<b>Xeno Biology:</b> Take a strange alien Gecko-Fox as a pet. (3hp, 14 DEX, d6 bite, can climb sheer surfaces, must be fed something living once a week)",
+            5: "<b>Toxicology:</b> Years of experimentation, immunity- building & study have provided you an immunity to all known poisons, and reduced effect on failed saves against unknown or alien toxins and poisons.",
+            6: "<b>Higher Dimensions:</b> Prying open the secrets of the universe have exposed you to things you can’t explain. Roll for a random Astromancy.",
+        },
+    },
+    {
+        "name": "Why You Left Science",
+        "options": {
+            1: "<b>Uncouth Research:</b> You dabbled in things that are frowned upon and were run out of academia.  Start with 3 corruption.",
+            2: "<b>Malaise:</b> You wanted new challenges and life in the lab just wasn’t cutting it anymore. Roll a random talent.",
+            3: "<b>Blackmail:</b> A rival researcher, competitor, or criminal organization implied that if you didn’t stop your current research, they’d stop it for you.",
+            4: "<b>Lab Accident:</b> There’s a corporate-sponsored bounty on your head for damage to company property.",
+            5: "<b>Research De-funded:</b> Due to budgetary issues, your research has been placed on permanent hold. Sorry.",
+            6: "<b>Field-Research:</b> You wanted more hands-on experience in your field.",
+        },
+    },
+    # starting gear
+    [
+        "Lab coat",
+        "Test tubes (6) & assorted medical tools",
+        "Plasma-Knife (D6 thermal, concealable)",
+    ],
+    # profile
+    """You’ve spent most of your life dedicated to the advancement of science. Due to new
+circumstances, you’ve decided to make the change from lab work to field work.""",
+]
 dossier_template = [
     {
         "name": "",
@@ -767,7 +811,7 @@ DOSSIERS = {
     "MACHINE": dossier_machine,
     "UNDERWORLD": dossier_underworld,
     "PSIONIC": dossier_psionic,
-    "SCIENTIST": None,
+    "SCIENTIST": dossier_scientist,
     "SOLDIER": None,
     "STAR-TOUCHED": None,
     "BOUNTY HUNTER": None,
