@@ -25,3 +25,10 @@ class Character:
         )
         self.dossier_question = self.dossier_part3.get("name")
         self.dossier_answer = choice(list(self.dossier_part3.get("options").values()))
+
+        self.gear += [
+            "Three days of rations (one slot)",
+            "Cheap Data-comm (one slot)",
+            "Glo-torch (one slot)",
+            f"{roll('3d6')} Credits (C)",
+        ]
