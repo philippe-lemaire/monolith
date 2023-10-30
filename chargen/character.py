@@ -1,10 +1,23 @@
 from gamelogic.roll import roll
 from gamelogic.backgrounds import backgrounds, DOSSIERS
+from gamelogic.finishing_touches import (
+    physique,
+    mannerisms,
+    hair,
+    clothing_style,
+    face,
+    male_names,
+    female_names,
+    ambiguous_names,
+    last_names,
+)
 from random import choice
 
 
 class Character:
     def __init__(self):
+        self.first_name = choice(choice((male_names, female_names, ambiguous_names)))
+        self.last_name = choice(last_names)
         self.STR = roll("3d6")
         self.DEX = roll("3d6")
         self.WIL = roll("3d6")
@@ -33,3 +46,10 @@ class Character:
             "Glo-torch (one slot)",
             f"{roll('3d6')} Credits (C)",
         ]
+        self.finishing_touches = {
+            "physique": choice(physique),
+            "mannerism": choice(mannerisms),
+            "hair": choice(hair),
+            "clothing style": choice(clothing_style),
+            "face": choice(face),
+        }
