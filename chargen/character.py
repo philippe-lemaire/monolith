@@ -11,12 +11,13 @@ class Character:
         self.HP = roll("d6")
 
         # self.background = choice(backgrounds)
-        self.background = backgrounds[2]
+        self.background = backgrounds[3]
         (
             self.dossier_part1,
             self.dossier_part2,
             self.dossier_part3,
             self.gear,
+            self.profile,
         ) = DOSSIERS.get(self.background)
         self.dossier_name = self.dossier_part1.get("name")
         self.dossier_option = self.dossier_part1.get("options").get(self.HP)
