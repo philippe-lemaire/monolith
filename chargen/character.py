@@ -10,8 +10,8 @@ class Character:
         self.WIL = roll("3d6")
         self.HP = roll("d6")
 
-        # self.background = choice(backgrounds)
-        self.background = backgrounds[6]
+        self.background = choice(backgrounds)
+
         (
             self.dossier_part1,
             self.dossier_part2,

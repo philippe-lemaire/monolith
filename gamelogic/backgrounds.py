@@ -805,44 +805,94 @@ dossier_soldier = [
 opportunities are calling your name.""",
 ]
 
-dossier_template = [
+
+dossier_star_touched = [
     {
-        "name": "",
+        "name": "What Gift Did the Stars Bring?",
         "options": {
-            1: """""",
-            2: """""",
-            3: """""",
-            4: """""",
-            5: """""",
-            6: """""",
+            1: "<b>The Deplorable Word:</b> Anyone you speak the word to must make a WIL save or take 1d12 WIL damage. Use once a day. WIL save vs corruption.",
+            2: "<b>Carried By the Wind:</b> Fly: Can fly once a day for 2d6 seconds at your normal movement.",
+            3: "<b>Puzzle Tongue:</b> Comprehend Languages: Can speak to, understand, and be understood by all spoken languages of approximately human-level intelligence.",
+            4: "<b>Warding Scriptures:</b> Your body is covered in a glowing script. Once a day when an attack is made against you for maximum damage, the damage is reverted back to the attacker.  Save vs corruption as the scriptures crawl further into you.",
+            5: "<b>Sunder:</b> You can attack with your mind and two free hands for D6 damage from up to 60 ft. Does not cause fatigue.",
+            6: "<b>Glittering Gate:</b> Spend 10 minutes performing a ritual in a 10’ circular area. Star-blessed spaces exist as a dyad, and only two can exist at once. Stepping into one space transfers those who enter to the other space. When a new space is created, the creator mentally chooses one of the existing two locations to dissipate. All who pass through this void space must save vs corruption.",
         },
     },
     {
-        "name": "",
+        "name": "Your Vision",
         "options": {
-            1: """""",
-            2: """""",
-            3: """""",
-            4: """""",
-            5: """""",
-            6: """""",
+            1: "<b>A Thousand Burning Suns:</b> Your eyes smolder. Fire does not harm you.",
+            2: "<b>The Forever Deep:</b> You can breathe underwater and are never cold.",
+            3: "<b>Abhorrent Geometry:</b> You are immune to mind-altering effects.",
+            4: "<b>Belly of a Black Hole:</b> Your eyes are pitch black. You can see in the dark.",
+            5: "<b>The Secret Truth:</b> You cannot understand or speak it. You can sense any untruth you hear.",
+            6: "<b>Perfect Symmetry:</b> It was almost too beautiful to behold.  Social encounters are much easier for you. Reaction rolls in social situations are always one category higher than your result.",
         },
     },
     {
-        "name": "",
+        "name": "What Was Taken?",
         "options": {
-            1: """""",
-            2: """""",
-            3: """""",
-            4: """""",
-            5: """""",
-            6: """""",
+            1: "<b>Your Voice:</b> You can speak, but at a slow, strained crackle that sets others on edge.",
+            2: "<b>Your Memories:</b> The past before you touched the infinite is insignificant, burned away to ash. You remember nothing from before.",
+            3: "<b>Your Mind:</b> Whenever you gain fatigue, roll a d6. On a 1, you spend the next round clutching your head and babbling.  Addiction-inducing stims will calm you.",
+            4: "<b>Your Superego:</b> Societal morality must be relearned, or perhaps simply left behind entirely.",
+            5: "<b>Your Future:</b> Once a week you must make a save vs. corruption.  Slowly your future is rotting away.",
+            6: "<b>Your Humanity:</b> Roll on the mutations table (pg. 89)",
         },
     },
     # starting gear
-    [],
+    ["Nothing can be truly possessed. You start with nothing but your clothing."],
     # profile
-    """""",
+    """The living void and its myriad aspects reach out to you. You now belong to some
+    greater purpose, or vaster intelligence, and have been gifted with a sliver of that
+    power to wield as the envoy of forces you could no possibly comprehend.""",
+]
+
+
+dossier_bounty_hunter = [
+    {
+        "name": "Specialty Tool",
+        "options": {
+            1: "<b>Visage of Dread:</b> (+1 Armor, immune to mind-altering effects): Skull helmet (or something intimidating). At the start of combat, enemies save vs WIL or cower in fear for 1 round.",
+            2: "<b>Heat-Seeking Sniper Rifle:</b> (D10) One mile range. 9-10 damage on the first shot of combat or from a hidden position is an instant kill.",
+            3: "<b>Grave-Foam Gauntlet:</b> Sprays a liquid cloud of gray dust, forming a 12 inch thick casing around the target for 1d12 hours. Nothing inside can break out. The casing keeps its contents alive in a safe stasis until released. 1 cartridge of fuel (3 uses). Buy more fuel from Bounty Hunters’ Union.",
+            4: "<b>Shock Dart:</b> (D6, spec ammo) Wrist mounted rocket dart. DEX save vs paralysis for 1d6 minutes.",
+            5: "<b>Wire Shot:</b> (grappling) Wrist-mounted. Shoots a magnetic smart-wire that wraps around and ensnares targets. Dex save or completely grappled. No save if surprised.",
+            6: "<b>Trick-Axe:</b> (D8, bulky, sweep): Can retract down to 3 feet in length for (D6).",
+        },
+    },
+    {
+        "name": "How Did You Hunt?",
+        "options": {
+            1: "<b>Like a True Hunter:</b> You hunted for trophies and glory, and by any means necessary. Take a notorious reputation and a war dog companion (d6 bite, 2 HP, 12 STR, 60’ speed)",
+            2: "<b>From the Shadows:</b> If you get the jump on someone from hiding, your attacks are enhanced.",
+            3: "<b>With a Personal Code:</b> Other hunters and those in the community respect you. You can request an audience with typically inaccessible underworld leaders.",
+            4: "<b>Loaded With Tech:</b> Take 1d4 smart grenades (d6 blast, thermal, grappling) an auto-saw, and binocs.",
+            5: "<b>By Any Means Necessary:</b> It was sometimes dirty, or unfair, but you got the job done. Any damage from traps, snares, or other preparations you make are enhanced.",
+            6: "<b>Just for the Money:</b> It’s only a job, after all. Negotiate for double payouts on any bounty job. The NPC offering the job must pass a WIL save to resist, otherwise they’re persuaded to pay extra.",
+        },
+    },
+    {
+        "name": "A Past Complication",
+        "options": {
+            1: "<b>Revenge:</b> An old target escaped from prison and is after you. The hunter becomes the hunted…",
+            2: "<b>Wanted:</b> You crossed the wrong syndicate. You’re now a wanted (alive) individual in 16 systems.",
+            3: "<b>Radio Silence:</b> Your old primary fixer and contact went silent. You worry they may be compromised, or worse.",
+            4: "<b>Old Dog:</b> Injuries, a hard life, and general wear and tear has taken its toll, and you’re not as spry as you once were. Sometimes that comes back to bite you.",
+            5: "<b>Imposter:</b> After you left the scene, someone else recently appeared claiming to be you, and they’re ruining your hard-earned rep. Undealt with, it could have some unpleasant consequences.",
+            6: "<b>One Last Job</b> An old client really needs your help on one last job.  Word is the pay is high...high enough for a lot of other hunters to also be on the hunt.",
+        },
+    },
+    # starting gear
+    [
+        "Rifle or two blasters.",
+        "Old Armor (Armor 1, Bulky)",
+        "Manacles",
+        "Bounty Hunting License & Union Membership.",
+    ],
+    # profile
+    """It’s a slimy, treacherous world out there, and you had to be just as nasty to keep the
+wolves from the door. You made your living as a licensed bounty hunter.""",
 ]
 
 DOSSIERS = {
@@ -856,6 +906,6 @@ DOSSIERS = {
     "PSIONIC": dossier_psionic,
     "SCIENTIST": dossier_scientist,
     "SOLDIER": dossier_soldier,
-    "STAR-TOUCHED": None,
-    "BOUNTY HUNTER": None,
+    "STAR-TOUCHED": dossier_star_touched,
+    "BOUNTY HUNTER": dossier_bounty_hunter,
 }
