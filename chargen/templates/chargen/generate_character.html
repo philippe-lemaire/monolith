@@ -4,7 +4,12 @@
 {% block title %}Monolith - Character Gen{% endblock title %}
 {% block content %}
 <h1>A Monolith Character</h1>
-<table class="table">
+
+<div class="card" style="width: 40rem;">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <h6 class="card-subtitle mb-2 text-muted">{{char.background}}</h6>
+    <table class="table">
     <tr>
         <th>STR</th>
         <th>DEX</th>
@@ -17,21 +22,29 @@
         <td>{{char.WIL}}</td>
         <td>{{char.HP}}</td>
     </tr>
-</table>
+    </table>
+    <table class="table">
 
-<table class="table">
-    <tr>
-        <th colspan="2">{{char.background}}</th>
-    </tr>
-    <tr>
-        <th>{{char.dossier_name}}</th><td>{{char.dossier_option|safe}}</td>
-    </tr>
-    <tr>
-        <th>{{char.dossier_subpart_name}}</th>
-        <td>{{char.dossier_subpart_option|safe}}</td>
-    </tr>
-    <tr>
-        <th>{{char.dossier_question}}</th><td>{{char.dossier_answer|safe}}</td>
-    </tr>
-</table>
+        <tr>
+            <th>{{char.dossier_name}}</th><td>{{char.dossier_option|safe}}</td>
+        </tr>
+        <tr>
+            <th>{{char.dossier_subpart_name}}</th>
+            <td>{{char.dossier_subpart_option|safe}}</td>
+        </tr>
+        <tr>
+            <th>{{char.dossier_question}}</th><td>{{char.dossier_answer|safe}}</td>
+        </tr>
+
+        <tr>
+            <th>Starting gear</th>
+            <td><ul>{% for item in char.gear %}<li>{{item}}</li>{% endfor %}</ul></td>
+        </tr>
+    </table>
+
+
+  </div>
+</div>
+
+
 {% endblock content %}
