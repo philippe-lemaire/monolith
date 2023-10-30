@@ -11,7 +11,7 @@ class Character:
         self.HP = roll("d6")
 
         # self.background = choice(backgrounds)
-        self.background = backgrounds[4]
+        self.background = backgrounds[6]
         (
             self.dossier_part1,
             self.dossier_part2,

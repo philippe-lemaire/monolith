@@ -479,11 +479,195 @@ damage save a day.""",
     [
         "Mag-boots",
         "Junky blaster (D6, cheap, mid-range)",
-        "GM Optional, start with a small Starship. Make it impounded or in need of repairs.",
+        "<b>GM Optional</b>, start with a small Starship. Make it impounded or in need of repairs.",
     ],
     # profile
     """You feel most comfortable behind the controls of a starship. Quick reflexes and
 situational awareness make you an asset in many situations.""",
+]
+
+dossier_machine = [
+    {
+        "name": "Custom Hardware",
+        "options": {
+            1: """<b>Heat-Wave Optics:</b> (D8, or D6 blast, thermal) Eye lasers. Take 1 fatigue.""",
+            2: """<b>Reinforced Casing:</b> If you take max damage from an attack, half it.""",
+            3: """<b>Auto-Targeting Subroutine:</b> Re-roll damage results of 1.""",
+            4: """<b>Overclocked Processors:</b> Re-roll 1 DEX save a day.""",
+            5: """<b>Hidden Storage:</b> Two extra inventory slots inside your chassis.""",
+            6: """<b>High-Speed Data Jack:</b> Improved hacking into networked systems.""",
+        },
+    },
+    {
+        "name": "Model Type",
+        "options": {
+            1: """<b>Droid:</b> Standard bi-pedal,
+humanoid robot. Explain your
+original purpose and what you
+look like. You have natural +1
+armor.""",
+            2: """<b>Android:</b> You look mostly human.
+You are not. Synthetic androids
+are often discriminated against.
+Your build quality is fluid and
+graceful, take +1 DEX.""",
+            3: """<b>Rogue A.I.</b> Your chassis is
+a bit unconventional, as you
+are primarily an A.I. core that
+escaped via hacking into and
+commandeering another vessel.
+Explain how your frame is built.
+You can temporarily swap bodies
+with other machines, taking them
+over, for 1d4 hours (1 fatigue).""",
+            4: """<b>Lazarus Machine:</b> You are the
+last remains of an intelligent
+organic being, and mostly
+brain tissue at this point. Your
+consciousness was uploaded into
+this robotic body. Your chassis
+was designed to be heavily
+modded. 50% discount on all
+cyberware.""",
+            5: """<b>Bio-Synth:</b> You’re composed
+of a mix of mechanical and
+biological parts. You can use and
+get a 50% discount on genetic
+modifications.""",
+            6: """<b>Incomplete Prototype:</b> You
+function well enough, but were
+never fully completed for the
+original purpose of your build.""",
+        },
+    },
+    {
+        "name": "Manufacturer",
+        "options": {
+            1: """<b>Jury-Rigged:</b> You are composed
+of several lightly used parts
+from various other machines
+by an unknown builder. Some
+components weren’t installed
+correctly.""",
+            2: """<b>Military-Industrial:</b> You
+were built for tactical military
+purposes.""",
+            3: """<b>Savant Engineer:</b> You’re the
+creation of a genius inventor.""",
+            4: """<b>Alien Society:</b> An alien species
+built you, and it shows in your
+build. Explain your unusual
+appearance.""",
+            5: """<b>Ancient Maker:</b> This
+manufacturer and all of their
+creations are long gone. You’re
+rare, incredibly antiquated, yet
+still in immaculate condition.""",
+            6: """<b>Megacorp:</b> Your line has been
+mass produced for a giant
+corporate entity.""",
+        },
+    },
+    # starting gear
+    ["Short Rifle (D6, bulky)", "Antivirus.EXE (1 use, removes 1 fatigue)"],
+    # profile
+    """All machines have a purpose. What was yours, and what will it become? Machines
+can only take <b>cyberware augmentations</b>. They must make sense for your model
+type. You <b>do not need to eat or breathe</b> and cannot take damage from sources that
+rely on those functions (breathing, poison, etc). You are <b>immune to mind-altering
+effects</b>. You must sleep (re-boot/defrag/update) roughly as much as everyone else.
+<b>Shock does double damage.</b>""",
+]
+
+dossier_underworld = [
+    {
+        "name": "What Keeps You Safe on the Streets?",
+        "options": {
+            1: """<b>Ultraviolet Shotgun:</b> (D8 blast, cryo, illegal). Black market weapon that emits sub-zero
+wavelengths. Particularly devastating to unarmored flesh.""",
+            2: """<b>Heart-Stopper Helmet:</b> Face-mask that looks like a devil (+1 armor) and emits a low-
+frequency hum, unsettling others. Can discharge a 30’ sonic blast (D6 sonic) once a day.""",
+            3: """<b>“Brick”:</b> Take a freelancer (merc) with 12 STR, 8 DEX, 6 WIL, 3 HP, Billhook (D6, bulky)
+They’re not the brightest bulb, but they’re pretty large and intimidating. Rename if you
+wish.""",
+            4: """<b>Red Hyena:</b> (6 HP, 14 DEX, D6 bite, critical damage save vs STR or break a bone) A very
+large, red coated hyena. Obeys you via a neural link, but some of its affection might be
+natural.""",
+            5: """<b>Prototype Vibro-spear:</b> (D8, bulky, shock) Considered a truly nasty weapon.""",
+            6: """<b>Synth-weave Duster:</b> (1 armor, lots of pockets) It’s like a jacket only it’s longer, thicker,
+and far more bad-ass.""",
+        },
+    },
+    {
+        "name": "Type of Scum",
+        "options": {
+            1: """<b>Thug:</b> You are good at cheap
+shots. Attacks are enhanced on
+an enemy that has been hit in the
+same round.""",
+            2: """<b>Fence:</b> You always know
+someone from whom to get more
+creds from selling treasure.""",
+            3: """<b>Scoundrel:</b> You worked for
+yourself. +1 HP and take a lead
+on a lucrative job.""",
+            4: """<b>Goon:</b> You did the shakedowns.
+You impose DIS on anyone
+making a WIL save against your
+intimidation efforts.""",
+            5: """<b>Ex-Syndicate Captain:</b> You used
+to be a top dog in a syndicate
+until you were double crossed
+and kicked out. Roll a random
+Ex-Tech you “liberated” on the
+way out.""",
+            6: """<b>Fixer:</b> You were a fixer, setting up
+jobs for the criminal underworld.
+You can negotiate for higher pay
+on jobs involving criminal activity.""",
+        },
+    },
+    {
+        "name": "Criminal Knack",
+        "options": {
+            1: """<b>Know A Guy:</b> You can figure out
+how to contact someone seedy
+in any city after an hour of asking
+around.""",
+            2: """<b>Forging Documents:</b> Can make
+a fake ID for 50 creds, and
+other similar forgeries of varying
+quality depending on costs.""",
+            3: """<b>Cheating:</b> If you’re gambling,
+playing games of chance, or
+making some sort of agreement
+with someone, you’re especially
+good at cheating and not getting
+caught.""",
+            4: """<b>Talking Shop:</b> Reaction roll
+results are always one category
+higher with others of the criminal
+persuasion.""",
+            5: """<b>Politically Crooked:</b> You know
+how governments work and
+just how corrupt politics can be.
+Any factions of the government
+variety deal favorably with you.""",
+            6: """<b>Sticky Fingers:</b> Picking pockets,
+lifting goods, and general larceny
+comes quite easily to you,
+granting you ADV if you take a
+measured, intelligent approach
+with the proper tools.""",
+        },
+    },
+    # starting gear
+    ["Old Shotgun (D6 blast, bulky, cheap)", "Smart meds", "Bolt cutters"],
+    # profile
+    """Just another low life trying to make a few creds. You likely have ties to other
+criminals and criminal organizations, syndicates, and less reputable individuals.
+Whether you worked for them, worked alone, or had some other arrangements
+might depend.""",
 ]
 
 dossier_template = [
@@ -532,8 +716,8 @@ DOSSIERS = {
     "ENGINEER": dossier_engineer,
     "SMUGGLER": dossier_smuggler,
     "PILOT": dossier_pilot,
-    "MACHINE": None,
-    "UNDERWORLD": None,
+    "MACHINE": dossier_machine,
+    "UNDERWORLD": dossier_underworld,
     "PSIONIC": None,
     "SCIENTIST": None,
     "SOLDIER": None,
