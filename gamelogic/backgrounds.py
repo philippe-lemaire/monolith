@@ -382,13 +382,110 @@ unwanted attention.""",
         "Blaster (D6)",
         "Stylish Outfit",
         "Fake Clearance Codes (1)",
-        """GM Optional, start with a small starship (stolen or indebted) with smuggling
+        """<b>GM Optional</b>, start with a small starship (stolen or indebted) with smuggling
 holds. It’s currently impounded or stolen.""",
     ],
     # Profile
     """Running contraband goods for underworld clients is a dangerous game, but you’ve
 gotten good at staying under the radar.""",
 ]
+
+dossier_pilot = [
+    {
+        "name": "Suited Up",
+        "options": {
+            1: """<b>Deluxe Array:</b> Holo-shades (improve visuals in darkness, look slick), armor-lined red
+jacket (1 Armor), and 2 blasters (D6), pack of alien cigars (blue smoke)""",
+            2: """<b>Alien Companion:</b> Generate a retainer (merc) with one unique feature befitting an alien
+species (alternatively can be a droid or other non-human.)""",
+            3: """<b>Exo-Skin Suit:</b> (1 armor) Nanotech morph suit, conforms to your body, wear under your
+regular clothes. Has a built in grappling gun and rebreather mask.""",
+            4: """<b>Stylin’:</b> Take a dashing outfit and cloak, silver-plated blaster (d6, replace starting
+weapon) and a thermal detonator (d6, blast, thermal).""",
+            5: """<b>Committed to Flying:</b> Take a datajack implant (Cerebral Socket). Installs the back of
+your head with a jack that allows you to plug into vehicles to more rapidly access special
+systems and data.""",
+            6: """<b>Just the Essentials:</b> Take a leather jacket, a stun gun and a retractable baton (D6,
+concealable)""",
+        },
+    },
+    {
+        "name": "Flying Expertise",
+        "options": {
+            1: """<b>Captain:</b> You have experience
+leading, and either through
+admiration or fear, others find
+your presence to be motivational
+in dire circumstances.""",
+            2: """<b>Astro-Navigator:</b> You know your
+way around space. You never
+get lost in space and always get
+around fast.""",
+            3: """<b>Ace:</b> You always have a few fancy
+moves when you’re in the pilot
+seat. When you pull off a daring
+move the results tend to go in
+your favor, at least on the first try
+of the day.""",
+            4: """<b>Union Licensed:</b> It was an
+honest living. Other pilots respect
+that. You get union discounts for
+yourself and friends with starport
+docking, lodging, and buying
+anything starship related.""",
+            5: """<b>Syndicate Contractor:</b>
+Any reaction rolls or social
+encounters with professional
+syndicates are one category
+higher, or more favorable in
+another abstract way.""",
+            6: """<b>Test Pilot:</b> You can pilot anything,
+and are experienced at operating
+vehicles that are damaged or
+partially broken. If your ship
+takes critical damage, delay the
+negative effects for 1D4 rounds.""",
+        },
+    },
+    {
+        "name": "Other Talents",
+        "options": {
+            1: """<b>Hot-Wiring:</b> You know how
+to cross the right wires to get
+vehicles running that don’t
+belong to you.""",
+            2: """<b>Hard Turns:</b> Gain an additional
+point of mobility in any starship
+you’re piloting.""",
+            3: """<b>Lead Foot:</b> Gain an additional
+point of movement in any
+starship you’re piloting.""",
+            4: """<b>Energy Efficient:</b> You know how
+to turn dashboard systems on-and-off in such a way that your
+shields have an additional +1.""",
+            5: """<b>Counter Tactics:</b> If you lose
+initiative at the start of starship
+combat, the first attack your ship
+makes will be enhanced.""",
+            6: """<b>Witty Banter:</b> During starship
+combat, hilarious yelling or witty
+banter with a co-pilot or onboard
+A.I. allows you to automatically
+succeed on a single critical
+damage save a day.""",
+        },
+    },
+    # starting gear
+    [
+        "Mag-boots",
+        "Junky blaster (D6, cheap, mid-range)",
+        "GM Optional, start with a small Starship. Make it impounded or in need of repairs.",
+    ],
+    # profile
+    """You feel most comfortable behind the controls of a starship. Quick reflexes and
+situational awareness make you an asset in many situations.""",
+]
+
 dossier_template = [
     {
         "name": "",
@@ -434,7 +531,7 @@ DOSSIERS = {
     "HUMAN EXPERIMENT": dossier_human_experiment,
     "ENGINEER": dossier_engineer,
     "SMUGGLER": dossier_smuggler,
-    "PILOT": None,
+    "PILOT": dossier_pilot,
     "MACHINE": None,
     "UNDERWORLD": None,
     "PSIONIC": None,
