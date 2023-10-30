@@ -11,19 +11,21 @@ from gamelogic.finishing_touches import (
     ambiguous_names,
     last_names,
 )
+from gamelogic.vices import vices
 from random import choice
 
 
 class Character:
-    def __init__(self):
+    def __init__(self, background=None):
         self.first_name = choice(choice((male_names, female_names, ambiguous_names)))
         self.last_name = choice(last_names)
         self.STR = roll("3d6")
         self.DEX = roll("3d6")
         self.WIL = roll("3d6")
         self.HP = roll("d6")
-
-        self.background = choice(backgrounds)
+        self.background = background
+        if not self.background:
+            self.background = choice(backgrounds)
 
         (
             self.dossier_part1,
@@ -53,3 +55,6 @@ class Character:
             "clothing style": choice(clothing_style),
             "face": choice(face),
         }
+        # save will or get a vice
+        save = roll("1d20") <= self.WIL
+        self.vice = None if save else choice(vices).get("name")
