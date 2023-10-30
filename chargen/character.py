@@ -9,6 +9,7 @@ class Character:
         self.DEX = roll("3d6")
         self.WIL = roll("3d6")
         self.HP = roll("d6")
+
         # self.background = choice(backgrounds)
         self.background = backgrounds[2]
         (
@@ -25,8 +26,7 @@ class Character:
         )
         self.dossier_question = self.dossier_part3.get("name")
         self.dossier_answer = choice(list(self.dossier_part3.get("options").values()))
-
-        self.gear += [
+        self.common_gear = [
             "Three days of rations (one slot)",
             "Cheap Data-comm (one slot)",
             "Glo-torch (one slot)",

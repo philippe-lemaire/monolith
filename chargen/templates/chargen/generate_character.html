@@ -38,13 +38,13 @@
 
         <tr>
             <th>Starting gear</th>
-            <td><ul>{% for item in char.gear %}<li>{{item}}</li>{% endfor %}</ul></td>
+            <td><ul>
+                {% for item in char.gear %}<li>{{item}}</li>{% endfor %}
+             {% for item in char.common_gear %}<li>{{item}}</li>{% endfor %}
+            </ul></td>
         </tr>
     </table>
-
-
   </div>
 </div>
-
 
 {% endblock content %}
