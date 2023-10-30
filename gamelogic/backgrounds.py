@@ -84,6 +84,11 @@ it’s time for a fresh start.""",
         },
     },
     ["Old Crew Emblem", "Combat Knife (D6) or 2 Flash Grenades", "Cigar"],
+    # profile
+    """Mercenary crews are guns for hire. They have experience in combat, insider
+knowledge of the violence business, and are a little rougher around the edges than
+others. You and your old crew fought for the highest bidder, not for any sort of
+ideology. Unless that ideology was lots of creds.""",
 ]
 
 dossier_human_experiment = [
@@ -182,6 +187,9 @@ items.""",
     },
     # starting gear
     ["Cloak (Hooded)", "Flashlight", "Tattoo (Serial Number or Bar Code)"],
+    # profile
+    """You have been the subject of unethical and experimental scientific tinkering.
+There were some side effects. You recently managed to escape.""",
 ]
 
 
@@ -274,6 +282,112 @@ breathable substances.""",
     },
     # starting gear
     ["Crowbar (D6)", "Duct Tape", "Grease-stained work clothes"],
+    # profile
+    """You’ve built a career around being handy. You’re skilled at repairing and maintaining
+mechanical structures and devices.""",
+]
+
+dossier_smuggler = [
+    {
+        "name": "Lucky Charm",
+        "options": {
+            1: """<b>Paired Sudo-Collars:</b> Highly unethical metal collars with a subject-object relationship. If
+you can get another living being to wear one, they pretty much do what you want. Make a
+opposed WIL save every day to maintain control.""",
+            2: """<b>Hummingbird Knife:</b> (D6, Vorpal) Vibrates at subsonic frequencies. Illegal.""",
+            3: """<b>Loyal Sidekick: Create a freelancer. You’ve been through thick and thin together. Think
+about how you met.""",
+            4: """<b>Hacking Sleeve:</b> Mechanized gauntlet with tools to hack, slice, and infiltrate just about
+any system or mechanical device. 1 fatigue when successfully used.""",
+            5: """<b>Custom Cape:</b> (Reaction rolls are always one category higher) Flamboyant design of your
+choice. Looking good is part of the job.""",
+            6: """<b>Moon Gum:</b> Tastes great. Causes intense hallucinations for 1d6 hours and is effectively
+immobilizing. Pretty colors… (6 sticks left)""",
+        },
+    },
+    {
+        "name": "Recent Entanglements",
+        "options": {
+            1: """<b>Botched Job:</b> You had to dump
+your cargo in space to escape
+pursuit by authorities. Your client
+is furious. You are trying to lay
+low.""",
+            2: """<b>Early Retirement Gift:</b> You
+lifted the goods from a job for
+yourself and said goodbye to the
+smuggler life. Unfortunately you
+are now wanted (alive) for 2000
+creds by a major gang.""",
+            3: """<b>Busted:</b> Mix-up with local system
+authorities. Well, not so much as
+a mix-up as...you’re blacklisted
+from there. (Blacklisted in next
+system you travel to)""",
+            4: """<b>Flawless Career:</b> You were one
+of the best and you’ve managed
+to retire without incident. Your
+reputation grants you 10%
+discount from any underworld
+dealers.""",
+            5: """<b>Jail Time:</b> After getting caught,
+you served some jail time. You’re
+just now getting out and have
+decided to try a change of career.""",
+            6: """<b>Criminal Elements:</b> Your
+smuggling services have recently
+disrupted a local criminal
+element’s business.""",
+        },
+    },
+    {
+        "name": "Trick Up Your Sleeve",
+        "options": {
+            1: """<b>Nine Lives:</b> Once daily, if an
+attack does more damage than
+your remaining HP, instead only
+reduce your HP to 1 and avoid a
+Save vs Critical Damage. (If this
+happens a 10th time, Save vs
+Corruption and add +10 to the
+Hollowing roll if you fail.)""",
+            2: """<b>Shoot First:</b> Don’t roll initiative
+in the first round of any combat,
+just go first.""",
+            3: """<b>Local Parlance:</b> You instantly
+pick up the common way of
+speaking and know how to sound
+like you belong. This carries
+massive street cred, especially
+with criminals.""",
+            4: """<b>Under the Radar:</b> Any smuggler
+worth their salt knows how to
+keep their head down when
+working - you have an especially
+effective touch at dodging local
+authorities.""",
+            5: """<b>Lovely Eyes:</b> Once a day you may
+persuade someone who would
+feasibly find you attractive to do
+you a favor or believe a lie.""",
+            6: """<b>Down But Not Out:</b> When you
+go down after failing a save vs
+critical damage, you can still fire
+a one handed gun. This may draw
+unwanted attention.""",
+        },
+    },
+    # starting gear
+    [
+        "Blaster (D6)",
+        "Stylish Outfit",
+        "Fake Clearance Codes (1)",
+        """GM Optional, start with a small starship (stolen or indebted) with smuggling
+holds. It’s currently impounded or stolen.""",
+    ],
+    # Profile
+    """Running contraband goods for underworld clients is a dangerous game, but you’ve
+gotten good at staying under the radar.""",
 ]
 dossier_template = [
     {
@@ -311,19 +425,21 @@ dossier_template = [
     },
     # starting gear
     [],
+    # profile
+    """""",
 ]
 
 DOSSIERS = {
     "MERCENARY": dossier_mercenary,
     "HUMAN EXPERIMENT": dossier_human_experiment,
     "ENGINEER": dossier_engineer,
-    "SMUGGLER": [None, None, None],
-    "PILOT": [None, None, None],
-    "MACHINE": [None, None, None],
-    "UNDERWORLD": [None, None, None],
-    "PSIONIC": [None, None, None],
-    "SCIENTIST": [None, None, None],
-    "SOLDIER": [None, None, None],
-    "STAR-TOUCHED": [None, None, None],
-    "BOUNTY HUNTER": [None, None, None],
+    "SMUGGLER": dossier_smuggler,
+    "PILOT": None,
+    "MACHINE": None,
+    "UNDERWORLD": None,
+    "PSIONIC": None,
+    "SCIENTIST": None,
+    "SOLDIER": None,
+    "STAR-TOUCHED": None,
+    "BOUNTY HUNTER": None,
 }
