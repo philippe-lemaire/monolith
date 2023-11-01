@@ -1,4 +1,6 @@
 from random import randint
+from gamelogic.roll import roll
+import re
 
 
 def roll_d100():
@@ -41,6 +43,18 @@ def get_reaction():
     if roll % 2 == 0:  # even case
         return positives[double], roll
     return negatives[double], roll
+
+
+def roll_encounter_numbers(s):
+    pattern = r"^\d{1,2}d\d{1,2}"
+    search = re.search(pattern, s)
+    if search:
+        parts = re.split(pattern, s)
+        to_roll = search.group(0)
+        number = roll(to_roll)
+        parts.insert(0, str(number))
+        return " ".join(parts)
+    return s
 
 
 if __name__ == "__main__":
