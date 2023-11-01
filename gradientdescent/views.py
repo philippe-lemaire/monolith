@@ -22,7 +22,6 @@ def roll_encounters_view(request):
             floor = form.cleaned_data["floor"]
             encounters_dict = encounters_per_floor.get(floor)
             encounter_roll = roll_d100()
-            encounter_roll = 99
             encounter_present = check_doubles(encounter_roll)
             context["encounter_present"] = encounter_present
             if encounter_present:
