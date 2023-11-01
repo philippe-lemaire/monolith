@@ -46,14 +46,12 @@ def get_reaction():
 
 
 def roll_encounter_numbers(s):
-    pattern = r"^\d{1,2}d\d{1,2}"
+    pattern = r"\d{1,2}d\d{1,2}"
     search = re.search(pattern, s)
     if search:
-        parts = re.split(pattern, s)
         to_roll = search.group(0)
         number = roll(to_roll)
-        parts.insert(0, str(number))
-        return " ".join(parts)
+        return re.sub(pattern, repl=str(number), string=s)
     return s
 
 
