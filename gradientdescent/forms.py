@@ -5,7 +5,8 @@ from crispy_forms.layout import Submit
 
 
 class FloorForm(forms.Form):
-    floor = forms.IntegerField(min_value=1, max_value=6, initial=1)
+    choices = [(k, k) for k in range(1, 7)]
+    floor = forms.ChoiceField(choices=choices)
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
