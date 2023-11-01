@@ -11,13 +11,13 @@
 
 {% if encounter_present %}
 <h2>Encouter</h2>
-<table class="table">
+<table class="table table-sm">
     <tr>
         <th>Encounter</th>
         <td>{{encounter}}</td>
     </tr>
     <tr>
-        <th>Distance</th>
+        <th>Distance*</th>
         <td>{{distance}}</td>
     </tr>
     <tr>
@@ -25,12 +25,14 @@
         <td>{{reaction}}</td>
     </tr>
     <tr>
-        <th>State*</th>
+        <th>State**</th>
         <td>{{status}}</td>
     </tr>
 </table>
 
-<p><em>State: From 0 to 99. Low value means weak and needing help, high value means strong and well equipped.</em></p>
+
+<p><em>Distance: From 0 to 9. Low value means close, high value means further away.</em></p>
+<p><em>State: From 0 to 99. Low value means weak and needing help, high value means strong and well equipped.</em></p>
 {% else %}
 <h2>No encouter</h2>
 {% endif %}
