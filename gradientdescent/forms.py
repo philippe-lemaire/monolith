@@ -5,7 +5,10 @@ from crispy_forms.layout import Submit
 
 
 class FloorForm(forms.Form):
-    choices = [(k, k) for k in encounters_per_floor.keys()]
+    choices = [
+        (k, encounters_per_floor[k].get("name").upper())
+        for k in encounters_per_floor.keys()
+    ]
     floor = forms.ChoiceField(choices=choices)
 
     def __init__(self, *args, **kwargs):
