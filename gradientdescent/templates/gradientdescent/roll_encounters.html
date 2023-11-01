@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+{% load static %}
+{% block title %}Gradient Descent - Roll Encounters{% endblock title %}
+{% block content %}
+
+<h1>Roll encounters</h1>
+
+<h2>Which Floor?</h2>
+{% crispy form form.helper %}
+<h2>Encouter</h2>
+{% if encounter_present %}
+<p>There is an encounter</p>
+<p>{{encounter}} at distance {{distance}}.</p>
+<p>Their reaction is {{reaction}}.</p>
+{% else %}
+<p>No encouter</p>
+{% endif %}
+{% endblock content%}

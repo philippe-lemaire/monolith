@@ -23,4 +23,5 @@ urlpatterns = [
     path("", TemplateView.as_view(template_name="index.html"), name="index"),
     path("chargen/", include("chargen.urls")),
     path("gametables/", include("gamelogic.urls")),
+    path("gradient-descent/", include("gradientdescent.urls")),
 ]
