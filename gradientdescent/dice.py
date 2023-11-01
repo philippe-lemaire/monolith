@@ -39,8 +39,8 @@ def get_reaction():
     positives = ("Positive", "Friendly")
     negatives = ("Negative", "Hostile")
     if roll % 2 == 0:  # even case
-        return positives[double]
-    return negatives[double]
+        return positives[double], roll
+    return negatives[double], roll
 
 
 if __name__ == "__main__":

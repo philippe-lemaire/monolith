@@ -30,6 +30,8 @@ def roll_encounters_view(request):
                 encounter = encounters_dict[key]
                 context["encounter"] = encounter
                 context["distance"] = distance
-                context["reaction"] = get_reaction()
+                reaction, status = get_reaction()
+                context["reaction"] = reaction
+                context["status"] = status
 
     return render(request, "gradientdescent/roll_encounters.html", context)
