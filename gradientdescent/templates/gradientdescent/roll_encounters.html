@@ -8,12 +8,30 @@
 
 <h2>Which Floor?</h2>
 {% crispy form form.helper %}
-<h2>Encouter</h2>
+
 {% if encounter_present %}
-<p>There is an encounter</p>
-<p>{{encounter}} at distance {{distance}}.</p>
-<p>Their reaction is {{reaction}}.</p>
+<h2>Encouter</h2>
+<table class="table">
+    <tr>
+        <th>Encounter</th>
+        <td>{{encounter}}</td>
+    </tr>
+    <tr>
+        <th>Distance</th>
+        <td>{{distance}}</td>
+    </tr>
+    <tr>
+        <th>Reaction</th>
+        <td>{{reaction}}</td>
+    </tr>
+    <tr>
+        <th>State*</th>
+        <td>{{status}}</td>
+    </tr>
+</table>
+
+<p><em>State: From 0 to 99. Low value means weak and needing help, high value means strong and well equipped.</em></p>
 {% else %}
-<p>No encouter</p>
+<h2>No encouter</h2>
 {% endif %}
 {% endblock content%}
