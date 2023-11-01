@@ -6,6 +6,6 @@ app_name = "gamelogic"
 
 urlpatterns = [
     path("astromancies", views.astromancies_view, name="astromancies"),
-    path("artefacts", views.artefacts_view, name="artefacts"),
+    path("artifacts", views.artifacts_view, name="artifacts"),
     path("psionics", views.psionics_view, name="psionics"),
 ]

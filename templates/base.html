@@ -52,7 +52,7 @@
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
             <a class="dropdown-item" href="{% url 'gamelogic:psionics' %}">Psionics</a>
             <a class="dropdown-item" href="{% url 'gamelogic:astromancies' %}">Astromancies</a>
-            <a class="dropdown-item" href="{% url 'gamelogic:artefacts' %}">Artefacts</a>
+            <a class="dropdown-item" href="{% url 'gamelogic:artifacts' %}">Artifacts</a>
         </div>
       </li>
       <li class="nav-item dropdown">
@@ -61,9 +61,9 @@
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
           <a class="dropdown-item" href="{% url 'gradientdescent:roll_encounters' %}">Roll Encounters</a>
-          <a class="dropdown-item" href="#">Encounter stats</a>
-          <a class="dropdown-item" href="#">Monarch</a>
-          <a class="dropdown-item" href="#">Artefacts</a>
+          <a class="dropdown-item" href="#">Encounter stats (todo, a full on model or not?)</a>
+          <a class="dropdown-item" href="#">Monarch (make a model to save monarch state?)</a>
+          <a class="dropdown-item" href="{% url 'gradientdescent:artifacts' %}">Artifacts</a>
         </div>
       </li>
       <!--

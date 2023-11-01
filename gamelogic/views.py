@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from .astromancies import astromancies
-from .artefacts import artefacts
+from .artifacts import artifacts
 from .psionics import psionics
 
 # Create your views here.
@@ -12,9 +12,9 @@ def astromancies_view(request):
     return render(request, template_name, context)
 
 
-def artefacts_view(request):
+def artifacts_view(request):
     template_name = "gamelogic/d66_tables.html"
-    context = {"table": artefacts, "h1": "Artefacts"}
+    context = {"table": artifacts, "h1": "Artifacts"}
     return render(request, template_name, context)
 
 

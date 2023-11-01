@@ -1,4 +1,4 @@
-artefacts = [
+artifacts = [
     {
         "number": "11",
         "name": "Symbiotic Sludge",

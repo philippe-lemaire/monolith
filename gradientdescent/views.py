@@ -10,6 +10,7 @@ from .dice import (
 )
 from .encounters_per_floor import encounters_per_floor
 from .forms import FloorForm
+from .artifacts import artifacts
 
 
 # Create your views here.
@@ -37,3 +38,11 @@ def roll_encounters_view(request):
                 context["status"] = status
 
     return render(request, "gradientdescent/roll_encounters.html", context)
+
+
+def artifacts_list_view(request):
+    template_name = "gradientdescent/artifacts.html"
+    roll = roll_d100()
+    key = get_key(roll, artifacts)
+    context = {"table": artifacts, "key": key}
+    return render(request, template_name, context)
