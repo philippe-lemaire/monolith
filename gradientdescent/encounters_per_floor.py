@@ -37,4 +37,18 @@ encounters_per_floor = {
         8: "1d5 Stunted Androids (p41)",
         9: "A Ghost in the Machine",
     },
+    "3.4": {
+        0: "A Diver",
+        3: "1d5 Escaped Child Androids from [55a] seeking the Mind Thief [45e]",
+        6: "The Mind Thief [45e] and 1d10 Forgotten Androids",
+        8: "1d5 Android Dogs from [44d]",
+        9: "Ghost in the Machine",
+    },
+    "9.9": {
+        0: "",
+        3: "",
+        6: "",
+        8: "",
+        9: "",
+    },
 }
