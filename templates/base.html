@@ -55,6 +55,7 @@
             <a class="dropdown-item" href="{% url 'gamelogic:artifacts' %}">Artifacts</a>
         </div>
       </li>
+      {% if user.is_staff %}
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Gradient Descent
@@ -62,11 +63,14 @@
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
           <a class="dropdown-item" href="{% url 'gradientdescent:roll_encounters' %}">Roll Encounters</a>
           <a class="dropdown-item" href="#">Encounter stats (todo, a full on model or not?)</a>
-          <a class="dropdown-item" href="#">Monarch (make a model to save monarch state?)</a>
+          <!-- admin only part-->
+
+          <a class="dropdown-item" href="{% url 'gradientdescent:monarchs' %}">Monarch (make a model to save monarch state?)</a>
           <a class="dropdown-item" href="{% url 'gradientdescent:d100_tables' "artifacts"  %}">Artifacts</a>
           <a class="dropdown-item" href="{% url 'gradientdescent:d100_tables' "random_search"  %}">Random Search</a>
         </div>
       </li>
+      {% endif %}
       <!--
       <li class="nav-item">
         <a class="nav-link" href="#">Features</a>

@@ -1,4 +1,8 @@
 from django.shortcuts import render
+from django.views.generic import ListView, DetailView
+from django.contrib.admin.views.decorators import staff_member_required
+from django.contrib.auth.mixins import LoginRequiredMixin
+
 from .dice import (
     roll_d10,
     roll_d100,
@@ -9,9 +13,12 @@ from .dice import (
     roll_encounter_numbers,
 )
 from .encounters_per_floor import encounters_per_floor
-from .forms import FloorForm
+from .forms import FloorForm, MonarchForm
 from .artifacts import artifacts
 from .random_search import random_search
+from .models import Monarch
+from django.http import HttpResponseRedirect
+from django.urls import reverse
 
 
 TABLES = {"artifacts": artifacts, "random_search": random_search}
@@ -54,4 +61,35 @@ def d100_table_view(request, table_name):
         "key": key,
         "table_name": table_name,
     }
+    return render(request, template_name, context)
+
+
+class MonarchListView(LoginRequiredMixin, ListView):
+    login_url = "/admin"
+    model = Monarch
+    template_name = "gradientdescent/monarch_list.html"
+    context_object_name = "monarchs"
+
+
+@staff_member_required
+def checkout_monarch(request, campaign_name):
+    monarch = Monarch.objects.get(campaign_name=campaign_name)
+    form = MonarchForm(request.POST or None, instance=monarch)
+
+    form.helper.form_action = reverse(
+        "gradientdescent:checkout_monarch", args=[monarch.campaign_name]
+    )
+    template_name = "gradientdescent/monarch_detail.html"
+    context = {"form": form, "monarch": monarch}
+
+    if request.method == "POST":
+        if form.is_valid():
+            # todo update the monarch
+            print("form is valid")
+            form.save()
+            return HttpResponseRedirect(
+                reverse(
+                    "gradientdescent:checkout_monarch", args=[monarch.campaign_name]
+                )
+            )
     return render(request, template_name, context)
