@@ -6,5 +6,5 @@ app_name = "gradientdescent"
 
 urlpatterns = [
     path("encounters", views.roll_encounters_view, name="roll_encounters"),
-    path("artifacts", views.artifacts_list_view, name="artifacts"),
+    path("d100_tables/<str:table_name>", views.d100_table_view, name="d100_tables"),
 ]

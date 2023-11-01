@@ -11,6 +11,10 @@ from .dice import (
 from .encounters_per_floor import encounters_per_floor
 from .forms import FloorForm
 from .artifacts import artifacts
+from .random_search import random_search
+
+
+TABLES = {"artifacts": artifacts, "random_search": random_search}
 
 
 # Create your views here.
@@ -40,9 +44,14 @@ def roll_encounters_view(request):
     return render(request, "gradientdescent/roll_encounters.html", context)
 
 
-def artifacts_list_view(request):
-    template_name = "gradientdescent/artifacts.html"
+def d100_table_view(request, table_name):
+    template_name = "gradientdescent/d100_table.html"
     roll = roll_d100()
-    key = get_key(roll, artifacts)
-    context = {"table": artifacts, "key": key}
+    table = TABLES.get(table_name)
+    key = get_key(roll, table)
+    context = {
+        "table": table,
+        "key": key,
+        "table_name": table_name,
+    }
     return render(request, template_name, context)
