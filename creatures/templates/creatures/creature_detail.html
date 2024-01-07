@@ -38,7 +38,7 @@ Monolith - Bestiaire - {{ creature.name }}
     {% endif %}
     {% if creature.special %}
     <tr>
-    <td colspan="3">{{creature.special}}</td>
+    <td colspan="3">{{creature.special|safe}}</td>
     </tr>
     {% endif %}
 
