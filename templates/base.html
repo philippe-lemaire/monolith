@@ -62,7 +62,7 @@
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
           <a class="dropdown-item" href="{% url 'gradientdescent:roll_encounters' %}">Roll Encounters</a>
-          <a class="dropdown-item" href="#">Encounter stats (todo, a full on model or not?)</a>
+          <a class="dropdown-item" href="{% url 'creatures:index' %}">Encounter stats</a>
           <!-- admin only part-->
 
           <a class="dropdown-item" href="{% url 'gradientdescent:monarchs' %}">Monarch (make a model to save monarch state?)</a>
@@ -80,6 +80,9 @@
         <a class="nav-link" href="#">Pricing</a>
       </li>-->
 
+    </ul>
+    <ul>
+      <li><a class="nav-item" href="{% url 'admin:index' %}">Admin</a></li>
     </ul>
   </div>
     </nav>

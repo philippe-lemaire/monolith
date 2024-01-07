@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     "chargen",
     "gamelogic",
     "gradientdescent",
+    "creatures",
 ]
 
 MIDDLEWARE = [

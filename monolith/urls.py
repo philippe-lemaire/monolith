@@ -24,4 +24,5 @@ urlpatterns = [
     path("chargen/", include("chargen.urls")),
     path("gametables/", include("gamelogic.urls")),
     path("gradient-descent/", include("gradientdescent.urls")),
+    path("gradient-descent/bestiary/", include("creatures.urls")),
 ]
